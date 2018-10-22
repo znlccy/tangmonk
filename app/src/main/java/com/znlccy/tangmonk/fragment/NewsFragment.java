@@ -17,12 +17,14 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.znlccy.tangmonk.R;
 import com.znlccy.tangmonk.adapter.NewsBaseAdapter;
+import com.znlccy.tangmonk.bean.Weather;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -227,11 +229,6 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         return null;
     }
 
-    /* 初始化弹出窗体 */
-    public void initPopWindowView(View view) {
-
-    }
-
     @Override
     public void onClick(View v) {
 
@@ -287,4 +284,14 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
 
     private TextView tv_yejian;
 
+    Weather weather;
+    PopupWindow popupWindow;
+    /* 悬浮框 */
+    public void initPopWindowView(View view) {
+        int width = getActivity().getWindowManager().getDefaultDisplay().getWidth();
+        int height = getActivity().getWindowManager().getDefaultDisplay().getHeight();
+
+        popupWindow = new PopupWindow(width, height-150);
+        /*popupWindow.setAnimationStyle(R.style.Animation);*/
+    }
 }
