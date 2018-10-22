@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/news_title_bar" />
+
+    <HorizontalScrollView
+        android:id="@+id/news_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:id="@+id/news_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/news_rb1"
+                style="@style/radio_style"
+                android:checked="true"
+                android:text="头条" />
+
+            <RadioButton
+                android:id="@+id/news_rb2"
+                style="@style/radio_style"
+                android:text="娱乐" />
+
+            <RadioButton
+                android:id="@+id/news_rb3"
+                style="@style/radio_style"
+                android:text="体育" />
+
+            <RadioButton
+                android:id="@+id/news_rb4"
+                style="@style/radio_style"
+                android:text="财经" />
+
+            <RadioButton
+                android:id="@+id/news_rb5"
+                style="@style/radio_style"
+                android:text="科技" />
+
+            <RadioButton
+                android:id="@+id/news_rb6"
+                style="@style/radio_style"
+                android:text="时尚" />
+
+            <RadioButton
+                android:id="@+id/news_rb7"
+                style="@style/radio_style"
+                android:text="历史" />
+
+            <RadioButton
+                android:id="@+id/news_rb8"
+                style="@style/radio_style"
+                android:text="彩票" />
+
+            <RadioButton
+                android:id="@+id/news_rb9"
+                style="@style/radio_style"
+                android:text="军事" />
+
+            <RadioButton
+                android:id="@+id/news_rb10"
+                style="@style/radio_style"
+                android:text="游戏" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/news_indicator"
+            android:layout_width="@dimen/news_xia_text"
+            android:layout_height="2dp"
+            android:background="#E3CE0C" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E3CE0C" />
+
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/news_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
